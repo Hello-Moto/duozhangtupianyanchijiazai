@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>多张图片加载</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        ul{list-style: none;}
+        ul.list > li{position: relative;height:88px;padding: 10px;border-bottom: 1px dashed #ccc;}
+        ul.list > li > div:nth-child(1){background: url("images/default.jpg") no-repeat center center;background-size: cover;height: 88px;width: 132px;position: absolute;top: 10px;left: 10px;}
+        ul.list > li > div:nth-child(1) > img{height: 100%;width:100%;opacity: 0;}
+        .content{height: 88px;margin-left: 142px;overflow: hidden;box-sizing: border-box;}
+        .content > h2{color: #000;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;font-size: 14px;}
+        .content > p{color: #333;font-size: 12px;padding-top: 5px;}
+        /* @keyframes light{from{opacity: 0;}to{opacity: 1;}} */
+    </style>
+</head>
+<body>
+    <ul class="list" id="list">
+    </ul>
+    <script type="text/javascript"src="utils.js"></script>
+    <script type="text/javascript" src="list.js"></script>
+</body>
+</html>
